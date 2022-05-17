@@ -1,0 +1,2 @@
+- I had no intensions to misuse these api's
+- Created Only for Educational Purpose
