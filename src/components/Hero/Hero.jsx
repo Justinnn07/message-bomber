@@ -13,18 +13,20 @@ const Hero = () => {
   const [countryCode, setCountryCode] = useState("Select Country Code");
   const [spamType, setSpamType] = useState("Select Type");
   const [phoneNumber, setPhoneNumber] = useState("");
-  const [howMany, setHowMany] = useState(0);
+  const [howMany, setHowMany] = useState("0");
   const styles = useStyles();
 
   const submit = async () => {
     let finalData = [];
     const _dataIndia =
-      howMany > 0 ? indianSpamData.slice(0, parseInt(howMany)) : indianSpamData;
+      parseInt(howMany) > 0
+        ? indianSpamData.slice(0, parseInt(howMany))
+        : indianSpamData;
 
     console.log(_dataIndia);
 
     const _dataNepal =
-      howMany > 0 ? nepalData.slice(0, parseInt(howMany)) : nepalData;
+      parseInt(howMany) > 0 ? nepalData.slice(0, parseInt(howMany)) : nepalData;
 
     const _finalCountry = countryCode === "+91" ? _dataIndia : null;
 
