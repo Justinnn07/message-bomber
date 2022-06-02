@@ -51,6 +51,7 @@ const Hero = () => {
       }
     }
   };
+
   return (
     <div className={styles.main}>
       <div style={{ textAlign: "center" }}>
